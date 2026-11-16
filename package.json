@@ -30,5 +30,6 @@
     "type": "git",
     "url": "https://github.com/ashlynbloomfield24/DISC-LAB.git"
   },
-  "homepage": "https://ashlynbloomfield24.github.io/DISC-LAB/"
+  "homepage": "https://ashlynbloomfield24.github.io/DISC-LAB/",
+  "license": "MIT"
 }

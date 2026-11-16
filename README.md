@@ -112,6 +112,10 @@ DISC-LAB/
 
 **Built with:** React 18 · TypeScript · Vite · Recharts · hand-built SVG · custom CSS · Vitest.
 
+## License
+
+The DISC LAB source code is released under the [MIT License](LICENSE). The cited papers remain the property of their publishers and authors; they are referenced, not redistributed.
+
 ## Acknowledgements
 
 Developed by Ashlyn Bloomfield for BME 5313 Cell Mechanobiology, with AI assistance (Claude Code) for implementation. All scientific content is drawn from the references above.
