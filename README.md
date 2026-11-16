@@ -2,6 +2,8 @@
 
 **An interactive, literature-based educational simulation of intervertebral disc (IVD) mechanobiology.**
 
+**Author:** Ashlyn Bloomfield · **Course:** BME 5313 Cell Mechanobiology
+
 🔗 **Live site:** https://ashlynbloomfield24.github.io/DISC-LAB/
 
 DISC LAB lets students apply mechanical loads to a lumbar intervertebral disc and watch how it deforms, creeps, recovers and fails. They can compare healthy, degenerated, herniated and Schmorl's-node discs, and see why the responses differ, using a simplified computational model built from published research.
@@ -112,4 +114,4 @@ DISC-LAB/
 
 ## Acknowledgements
 
-Developed for a college biomedical engineering mechanobiology assignment, with AI assistance (Claude Code) for implementation. All scientific content is drawn from the references above.
+Developed by Ashlyn Bloomfield for BME 5313 Cell Mechanobiology, with AI assistance (Claude Code) for implementation. All scientific content is drawn from the references above.
