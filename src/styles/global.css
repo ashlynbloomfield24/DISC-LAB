@@ -406,3 +406,20 @@ main.page { animation: pagein 0.28s var(--ease); }
 @media (max-width: 900px) { .docs-layout { grid-template-columns: minmax(0, 1fr); } }
 .docs .param-table { display: block; overflow-x: auto; }
 .docs .param-table td { white-space: normal; }
+
+/* ---------- References: author card in the right column ---------- */
+.refs-page { max-width: 1440px; }
+.refs-layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 20px; align-items: start; }
+.refs-layout .refs-list { grid-column: 1; grid-row: 1; }
+.author-card { grid-column: 2; grid-row: 1; position: sticky; top: 76px; padding: 20px 22px; }
+.author-card dl { margin: 10px 0 0; }
+.author-card dt { font-size: 12px; font-weight: 600; color: var(--text-2); margin-top: 12px; }
+.author-card dt:first-child { margin-top: 0; }
+.author-card dd { margin: 2px 0 0; font-size: 15px; font-weight: 500; word-break: break-word; }
+.author-card a { color: var(--accent); text-decoration: none; }
+.author-card a:hover { text-decoration: underline; }
+@media (max-width: 900px) {
+  .refs-layout { grid-template-columns: minmax(0, 1fr); }
+  .author-card { grid-column: 1; grid-row: auto; position: static; }
+  .refs-layout .refs-list { grid-row: auto; }
+}

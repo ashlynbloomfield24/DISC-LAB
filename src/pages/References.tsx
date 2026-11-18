@@ -30,6 +30,26 @@ export default function References() {
         </p>
       </section>
 
+      <div className="refs-layout">
+      <aside className="card author-card" aria-label="About the author">
+        <div className="ref-kind">About this project</div>
+        <dl>
+          <dt>Name</dt>
+          <dd>Ashlyn Bloomfield</dd>
+          <dt>Email</dt>
+          <dd>
+            <a href="mailto:ashlynbloomfield24@gmail.com">ashlynbloomfield24@gmail.com</a>
+          </dd>
+          <dt>GitHub</dt>
+          <dd>
+            <a href="https://github.com/ashlynbloomfield24/DISC-LAB" target="_blank" rel="noreferrer">
+              ashlynbloomfield24/DISC-LAB ↗
+            </a>
+          </dd>
+          <dt>Course</dt>
+          <dd>BME 5313 Cell Mechanobiology</dd>
+        </dl>
+      </aside>
       <div className="refs-list">
         {REFERENCE_DETAILS.map((d, i) => {
           const r = REFERENCES[d.key];
@@ -64,6 +84,7 @@ export default function References() {
             </article>
           );
         })}
+      </div>
       </div>
 
       <section className="card refs-secondary">
