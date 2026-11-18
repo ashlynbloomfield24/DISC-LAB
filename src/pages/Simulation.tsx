@@ -3,6 +3,7 @@ import CompareResults from '../components/CompareResults';
 import DiscVisualization from '../components/DiscVisualization';
 import ForceControls, { type TestMode } from '../components/ForceControls';
 import InfoTip from '../components/InfoTip';
+import { openTutorial } from '../components/Tutorial';
 import PlaybackBar, { SPEEDS, useSimClock } from '../components/PlaybackBar';
 import Readouts, { readoutItems } from '../components/Readouts';
 import ResultsGraphs, { RelaxationGraphs } from '../components/ResultsGraphs';
@@ -192,6 +193,9 @@ export default function Simulation({ launchQuery = '' }: { launchQuery?: string 
               ? 'The same load on a healthy and a degenerated disc, side by side.'
               : 'Apply a load to a lumbar disc and watch how it deforms, creeps and recovers over time.'}
           </p>
+          <button className="howto-btn" onClick={openTutorial}>
+            <span aria-hidden>?</span> How to use
+          </button>
         </div>
         <div className="condition-bar">
           <div className="condition-buttons">

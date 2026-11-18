@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Footer from './components/Footer';
 import Navigation, { type PageId } from './components/Navigation';
+import Tutorial, { TUTORIAL_EVENT, tutorialSeen } from './components/Tutorial';
 import Learn from './pages/Learn';
 import ModelDocs from './pages/ModelDocs';
 import Quiz from './pages/Quiz';
@@ -23,13 +24,20 @@ function parseHash(): Route {
 
 export default function App() {
   const [route, setRoute] = useState<Route>(parseHash);
+  // The how-to-use tutorial opens on a visitor's first visit and can be reopened at any time.
+  const [tourOpen, setTourOpen] = useState(() => !tutorialSeen());
   useEffect(() => {
     const onHash = () => {
       setRoute(parseHash());
       window.scrollTo({ top: 0 });
     };
+    const onTour = () => setTourOpen(true);
     window.addEventListener('hashchange', onHash);
-    return () => window.removeEventListener('hashchange', onHash);
+    window.addEventListener(TUTORIAL_EVENT, onTour);
+    return () => {
+      window.removeEventListener('hashchange', onHash);
+      window.removeEventListener(TUTORIAL_EVENT, onTour);
+    };
   }, []);
   const go = (hash: string) => {
     window.location.hash = hash;
@@ -43,6 +51,7 @@ export default function App() {
       {route.page === 'references' && <References />}
       {route.page === 'model' && <ModelDocs />}
       <Footer />
+      <Tutorial open={tourOpen} onClose={() => setTourOpen(false)} />
     </>
   );
 }

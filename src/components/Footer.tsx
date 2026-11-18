@@ -1,3 +1,5 @@
+import { openTutorial } from './Tutorial';
+
 export default function Footer() {
   return (
     <footer className="footer">
@@ -12,6 +14,7 @@ export default function Footer() {
           <a href="#/quiz">Quiz</a>
           <a href="#/references">References</a>
           <a href="#/model">Model documentation</a>
+          <button className="footer-link-btn" onClick={openTutorial}>How to use</button>
         </nav>
       </div>
     </footer>
